@@ -53,6 +53,7 @@ public class Apollobossmod {
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::enqueueIMC);
         // Register the processIMC method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::processIMC);
+        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
         GeckoLib.initialize();
 
         // Register ourselves for server and other game events we are interested in
@@ -88,21 +89,6 @@ public class Apollobossmod {
         // Do something when the server starts
         LOGGER.info("HELLO from server starting");
     }
-    @SubscribeEvent
-    public static void onAttributeCreation(final EntityAttributeCreationEvent event)
-    {
-        event.put(APOLLO_BOSS,ApolloBoss.setAttributes());
-    }
-    @SubscribeEvent
-    public static void onEntitiesRegistry(final RegistryEvent.Register<EntityType<?>> event)
-    {
-        event.getRegistry().register(APOLLO_BOSS.setRegistryName(MODID,"apollo_boss"));
-    }
-    @SubscribeEvent
-    public static void onItemsRegistry(final RegistryEvent.Register<Item> event)
-    {
-        event.getRegistry().register(APOLLO_SPAWN_EGG);
-    }
 
     // You can use EventBusSubscriber to automatically subscribe events on the contained class (this is subscribing to the MOD
     // Event bus for receiving Registry Events)
@@ -113,5 +99,21 @@ public class Apollobossmod {
             // Register a new block here
             LOGGER.info("HELLO from Register Block");
         }
+        @SubscribeEvent
+        public static void onAttributeCreation(final EntityAttributeCreationEvent event)
+        {
+            event.put(APOLLO_BOSS,ApolloBoss.setAttributes());
+        }
+        @SubscribeEvent
+        public static void onEntitiesRegistry(final RegistryEvent.Register<EntityType<?>> event)
+        {
+            event.getRegistry().register(APOLLO_BOSS.setRegistryName(MODID,"apollo_boss"));
+        }
+        @SubscribeEvent
+        public static void onItemsRegistry(final RegistryEvent.Register<Item> event)
+        {
+            event.getRegistry().register(APOLLO_SPAWN_EGG);
+        }
+
     }
 }

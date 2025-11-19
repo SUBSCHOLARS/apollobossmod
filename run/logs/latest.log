@@ -1,0 +1,91 @@
+[1911月2025 23:43:22.007] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeclientuserdev, --version, MOD_DEV, --assetIndex, 1.18, --assetsDir, /Users/hatanakakouta/.gradle/caches/forge_gradle/assets, --gameDir, ., --fml.forgeVersion, 39.1.2, --fml.mcVersion, 1.18.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20211210.034407, --mixin.config, apollobossmod.mixins.json]
+[1911月2025 23:43:22.012] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 9.1.3+9.1.3+main.9b69c82a starting: java version 17.0.1 by Oracle Corporation
+[1911月2025 23:43:22.172] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/Users/hatanakakouta/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%2327!/ Service=ModLauncher Env=CLIENT
+[1911月2025 23:43:24.716] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeclientuserdev' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, /Users/hatanakakouta/.gradle/caches/forge_gradle/assets, --assetIndex, 1.18]
+[1911月2025 23:43:24.761] [main/WARN] [mixin/]: Reference map 'apollobossmod.refmap.json' for apollobossmod.mixins.json could not be read. If this is a development environment you can ignore this message
+[1911月2025 23:43:38.192] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResources/]: Assets URL 'union:/Users/hatanakakouta/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.18.1-39.1.2_mapped_official_1.18.1/forge-1.18.1-39.1.2_mapped_official_1.18.1-recomp.jar%2376!/assets/.mcassetsroot' uses unexpected schema
+[1911月2025 23:43:38.194] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResources/]: Assets URL 'union:/Users/hatanakakouta/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.18.1-39.1.2_mapped_official_1.18.1/forge-1.18.1-39.1.2_mapped_official_1.18.1-recomp.jar%2376!/data/.mcassetsroot' uses unexpected schema
+[1911月2025 23:43:38.214] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[1911月2025 23:43:38.232] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
+[1911月2025 23:43:38.483] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.2.1 SNAPSHOT
+[1911月2025 23:43:38.929] [Render thread/ERROR] [com.mojang.blaze3d.platform.GLX/]: GLFW error collected during initialization: GLFW error during init: [0x10008]13114398912
+[1911月2025 23:43:41.721] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 39.1.2, for MC 1.18.1 with MCP 20211210.034407
+[1911月2025 23:43:41.724] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v39.1.2 Initialized
+[1911月2025 23:43:42.387] [Render thread/INFO] [org.apollo.apollobossmod.Apollobossmod/]: HELLO from Register Block
+[1911月2025 23:43:44.336] [Render thread/ERROR] [com.mojang.text2speech.Narrator/]: Error while loading the narrator : java.lang.NoClassDefFoundError: com/sun/jna/PointerTool
+[1911月2025 23:43:44.432] [Render thread/INFO] [net.minecraftforge.gametest.ForgeGameTestHooks/]: Enabled Gametest Namespaces: [apollobossmod]
+[1911月2025 23:43:45.064] [Render thread/INFO] [net.minecraft.server.packs.resources.SimpleReloadableResourceManager/]: Reloading ResourceManager: Default, Mod Resources
+[1911月2025 23:43:46.400] [Worker-Main-13/INFO] [org.apollo.apollobossmod.Apollobossmod/]: HELLO FROM PREINIT
+[1911月2025 23:43:46.815] [Worker-Main-13/INFO] [org.apollo.apollobossmod.Apollobossmod/]: DIRT BLOCK >> minecraft:dirt
+[1911月2025 23:43:48.120] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
+[1911月2025 23:43:51.754] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Found status: AHEAD Current: 39.1.2 Target: null
+[1911月2025 23:43:56.948] [Worker-Main-10/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'apollobossmod:apollo_spawn_egg#inventory' referenced from: apollobossmod:apollo_spawn_egg#inventory: java.io.FileNotFoundException: apollobossmod:models/item/apollo_spawn_egg.json
+[1911月2025 23:43:59.097] [Worker-Main-14/INFO] [org.apollo.apollobossmod.Apollobossmod/]: Hello world from the MDK
+[1911月2025 23:43:59.100] [Worker-Main-14/INFO] [org.apollo.apollobossmod.Apollobossmod/]: Got IMC [Hello world]
+[1911月2025 23:44:04.188] [Render thread/INFO] [com.mojang.blaze3d.audio.Library/]: OpenAL initialized on device CoreAudio Default
+[1911月2025 23:44:04.201] [Render thread/INFO] [net.minecraft.client.sounds.SoundEngine/SOUNDS]: Sound engine started
+[1911月2025 23:44:04.405] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
+[1911月2025 23:44:04.488] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x128x4 minecraft:textures/atlas/signs.png-atlas
+[1911月2025 23:44:04.494] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[1911月2025 23:44:04.495] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[1911月2025 23:44:04.496] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
+[1911月2025 23:44:04.497] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
+[1911月2025 23:44:04.497] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[1911月2025 23:44:06.077] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
+[1911月2025 23:44:06.085] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
+[1911月2025 23:44:06.086] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
+[1911月2025 23:44:06.601] [Realms Notification Availability checker #1/INFO] [com.mojang.realmsclient.client.RealmsClient/]: Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: 0
+[1911月2025 23:44:12.774] [Render thread/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[1911月2025 23:44:12.776] [Render thread/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+[1911月2025 23:44:12.779] [Render thread/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[1911月2025 23:44:12.780] [Render thread/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[1911月2025 23:44:12.781] [Render thread/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[1911月2025 23:44:12.785] [Render thread/INFO] [net.minecraft.server.packs.resources.SimpleReloadableResourceManager/]: Reloading ResourceManager: Default, , geckolib-1.18-3.0.0_mapped_official_1.18.1.jar, main
+[1911月2025 23:44:13.654] [Render thread/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Loaded 7 recipes
+[1911月2025 23:44:14.454] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 1141 advancements
+[1911月2025 23:44:15.377] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[1911月2025 23:44:15.450] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Starting integrated minecraft server version 1.18.1
+[1911月2025 23:44:15.451] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Generating keypair
+[1911月2025 23:44:15.747] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
+[1911月2025 23:44:16.346] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[1911月2025 23:44:18.344] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[1911月2025 23:44:18.364] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[1911月2025 23:44:18.365] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[1911月2025 23:44:18.365] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[1911月2025 23:44:18.365] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[1911月2025 23:44:18.794] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[1911月2025 23:44:19.267] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[1911月2025 23:44:19.835] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 23%
+[1911月2025 23:44:20.267] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 43%
+[1911月2025 23:44:20.773] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 69%
+[1911月2025 23:44:21.272] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 95%
+[1911月2025 23:44:21.326] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Time elapsed: 5572 ms
+[1911月2025 23:44:21.338] [Server thread/INFO] [net.minecraftforge.server.permission.PermissionAPI/]: Successfully initialized permission handler forge:default_handler
+[1911月2025 23:44:21.339] [Server thread/INFO] [org.apollo.apollobossmod.Apollobossmod/]: HELLO from server starting
+[1911月2025 23:44:22.105] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing view distance to 12, from 10
+[1911月2025 23:44:22.112] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing simulation distance to 12, from 0
+[1911月2025 23:44:23.736] [Netty Local Client IO #0/INFO] [net.minecraftforge.network.NetworkHooks/]: Connected to a modded server.
+[1911月2025 23:44:23.818] [Server thread/INFO] [net.minecraftforge.common.AdvancementLoadFix/]: Using new advancement loading for net.minecraft.server.PlayerAdvancements@2cbef01
+[1911月2025 23:44:23.951] [Server thread/INFO] [net.minecraft.server.players.PlayerList/]: Dev[local:E:8fdce4e3] logged in with entity id 166 at (249.3850338853521, 71.0, 157.6687669893533)
+[1911月2025 23:44:24.027] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev joined the game
+[1911月2025 23:44:24.608] [Server thread/WARN] [net.minecraft.server.MinecraftServer/]: Can't keep up! Is the server overloaded? Running 3011ms or 60 ticks behind
+[1911月2025 23:44:25.784] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 0 advancements
+[1911月2025 23:44:44.585] [Server thread/WARN] [net.minecraft.server.MinecraftServer/]: Can't keep up! Is the server overloaded? Running 4994ms or 99 ticks behind
+[1911月2025 23:44:56.740] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
+[1911月2025 23:44:56.778] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[ApolloBoss]'/minecraft:overworld
+[1911月2025 23:44:56.819] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[ApolloBoss]'/minecraft:the_nether
+[1911月2025 23:44:56.821] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[ApolloBoss]'/minecraft:the_end
+[1911月2025 23:44:57.550] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: Dev lost connection: Disconnected
+[1911月2025 23:44:57.551] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev left the game
+[1911月2025 23:44:57.567] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: Stopping singleplayer server as player logged out
+[1911月2025 23:44:57.593] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Stopping server
+[1911月2025 23:44:57.595] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving players
+[1911月2025 23:44:57.595] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving worlds
+[1911月2025 23:44:57.595] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[ApolloBoss]'/minecraft:overworld
+[1911月2025 23:44:57.651] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[ApolloBoss]'/minecraft:the_nether
+[1911月2025 23:44:57.653] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[ApolloBoss]'/minecraft:the_end
+[1911月2025 23:44:57.674] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (ApolloBoss): All chunks are saved
+[1911月2025 23:44:57.675] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[1911月2025 23:44:57.675] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[1911月2025 23:44:57.675] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage: All dimensions are saved
+[1911月2025 23:44:58.864] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Stopping!

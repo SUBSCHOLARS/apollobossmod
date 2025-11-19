@@ -23,6 +23,7 @@ public class Apollobossmod {
 
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogManager.getLogger();
+    public static final String MODID="apollobossmod";
 
     public Apollobossmod() {
         // Register the setup method for modloading

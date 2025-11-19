@@ -1,12 +1,17 @@
 package org.apollo.apollobossmod;
 
+import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.InterModComms;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
 import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
@@ -14,6 +19,7 @@ import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
+import software.bernie.geckolib3.GeckoLib;
 
 import java.util.stream.Collectors;
 
@@ -25,6 +31,12 @@ public class Apollobossmod {
     private static final Logger LOGGER = LogManager.getLogger();
     public static final String MODID="apollobossmod";
 
+    public static final EntityType<ApolloBoss> APOLLO_BOSS=EntityType.Builder.of(ApolloBoss::new, MobCategory.CREATURE)
+            .sized(0.9F,1.4F)
+            .setTrackingRange(32)
+            .setShouldReceiveVelocityUpdates(true)
+            .build("apollo_boss");
+
     public Apollobossmod() {
         // Register the setup method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
@@ -32,9 +44,14 @@ public class Apollobossmod {
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::enqueueIMC);
         // Register the processIMC method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::processIMC);
+        GeckoLib.initialize();
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
+    }
+    private void doClientStuff(final FMLClientSetupEvent event)
+    {
+        EntityRenderers.register(APOLLO_BOSS,ApolloBossRenderer::new);
     }
 
     private void setup(final FMLCommonSetupEvent event) {
@@ -61,6 +78,16 @@ public class Apollobossmod {
     public void onServerStarting(ServerStartingEvent event) {
         // Do something when the server starts
         LOGGER.info("HELLO from server starting");
+    }
+    @SubscribeEvent
+    public static void onAttributeCreation(final EntityAttributeCreationEvent event)
+    {
+        event.put(APOLLO_BOSS,ApolloBoss.setAttributes());
+    }
+    @SubscribeEvent
+    public static void onEntitiesRegistry(final RegistryEvent.Register<EntityType<?>> event)
+    {
+        event.getRegistry().register(APOLLO_BOSS.setRegistryName(MODID,"apollo_boss"));
     }
 
     // You can use EventBusSubscriber to automatically subscribe events on the contained class (this is subscribing to the MOD

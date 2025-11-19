@@ -1,4 +1,4 @@
-package org.apollo.apollobossmod;
+package com.example.apollobossmod;
 
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.AgeableMob;

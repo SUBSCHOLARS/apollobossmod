@@ -1,8 +1,11 @@
-package org.apollo.apollobossmod;
+package com.example.apollobossmod;
 
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.SpawnEggItem;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
@@ -24,7 +27,7 @@ import software.bernie.geckolib3.GeckoLib;
 import java.util.stream.Collectors;
 
 // The value here should match an entry in the META-INF/mods.toml file
-@Mod("apollobossmod")
+@Mod(Apollobossmod.MODID)
 public class Apollobossmod {
 
     // Directly reference a slf4j logger
@@ -36,6 +39,12 @@ public class Apollobossmod {
             .setTrackingRange(32)
             .setShouldReceiveVelocityUpdates(true)
             .build("apollo_boss");
+    public static final Item APOLLO_SPAWN_EGG=
+            new SpawnEggItem(APOLLO_BOSS,
+                    0xFF0000,
+                    0x00FF00,
+                    new Item.Properties().tab(CreativeModeTab.TAB_MISC)
+            ).setRegistryName(MODID,"apollo_spawn_egg");
 
     public Apollobossmod() {
         // Register the setup method for modloading
@@ -88,6 +97,11 @@ public class Apollobossmod {
     public static void onEntitiesRegistry(final RegistryEvent.Register<EntityType<?>> event)
     {
         event.getRegistry().register(APOLLO_BOSS.setRegistryName(MODID,"apollo_boss"));
+    }
+    @SubscribeEvent
+    public static void onItemsRegistry(final RegistryEvent.Register<Item> event)
+    {
+        event.getRegistry().register(APOLLO_SPAWN_EGG);
     }
 
     // You can use EventBusSubscriber to automatically subscribe events on the contained class (this is subscribing to the MOD

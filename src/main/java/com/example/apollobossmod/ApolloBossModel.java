@@ -1,4 +1,4 @@
-package org.apollo.apollobossmod;
+package com.example.apollobossmod;
 
 import net.minecraft.resources.ResourceLocation;
 import software.bernie.geckolib3.model.AnimatedGeoModel;

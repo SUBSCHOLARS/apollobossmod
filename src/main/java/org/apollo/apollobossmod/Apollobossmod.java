@@ -1,4 +1,4 @@
-package com.example.apollobossmod;
+package org.apollo.apollobossmod;
 
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.entity.EntityType;

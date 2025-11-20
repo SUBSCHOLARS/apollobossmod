@@ -33,7 +33,7 @@ public class ApolloBoss extends Animal implements IAnimatable {
                 .add(Attributes.MAX_HEALTH, 2000.0D)
                 .add(Attributes.ATTACK_DAMAGE, 10.0F)
                 .add(Attributes.ATTACK_SPEED, 6.0F)
-                .add(Attributes.MOVEMENT_SPEED, 5.0F).build();
+                .add(Attributes.MOVEMENT_SPEED, 2.0F).build();
     }
     protected void registerGoals()
     {

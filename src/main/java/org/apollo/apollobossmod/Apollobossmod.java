@@ -22,6 +22,9 @@ import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
+import org.apollo.apollobossmod.apolloboss.ApolloBoss;
+import org.apollo.apollobossmod.apolloboss.ApolloBossRenderer;
+import org.apollo.apollobossmod.apolloboss.ApolloChocolate;
 import software.bernie.geckolib3.GeckoLib;
 
 import java.util.stream.Collectors;
@@ -45,6 +48,7 @@ public class Apollobossmod {
                     0x00FF00,
                     new Item.Properties().tab(CreativeModeTab.TAB_MISC)
             ).setRegistryName(MODID,"apollo_spawn_egg");
+    public static final Item APOLLO_CHOCOLATE=new ApolloChocolate().setRegistryName(MODID,"apollo_chocolate");
 
     public Apollobossmod() {
         // Register the setup method for modloading
@@ -61,7 +65,7 @@ public class Apollobossmod {
     }
     private void doClientStuff(final FMLClientSetupEvent event)
     {
-        EntityRenderers.register(APOLLO_BOSS,ApolloBossRenderer::new);
+        EntityRenderers.register(APOLLO_BOSS, ApolloBossRenderer::new);
     }
 
     private void setup(final FMLCommonSetupEvent event) {
@@ -113,6 +117,7 @@ public class Apollobossmod {
         public static void onItemsRegistry(final RegistryEvent.Register<Item> event)
         {
             event.getRegistry().register(APOLLO_SPAWN_EGG);
+            event.getRegistry().register(APOLLO_CHOCOLATE);
         }
 
     }

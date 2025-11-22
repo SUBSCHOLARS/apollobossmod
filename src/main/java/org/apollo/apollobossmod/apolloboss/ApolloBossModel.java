@@ -1,6 +1,7 @@
-package org.apollo.apollobossmod;
+package org.apollo.apollobossmod.apolloboss;
 
 import net.minecraft.resources.ResourceLocation;
+import org.apollo.apollobossmod.Apollobossmod;
 import software.bernie.geckolib3.model.AnimatedGeoModel;
 
 public class ApolloBossModel extends AnimatedGeoModel<ApolloBoss>{

@@ -1,5 +1,6 @@
 package org.apollo.apollobossmod.apolloboss;
 
+import net.minecraft.util.Mth;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.goal.Goal;
 
@@ -70,7 +71,16 @@ public class ApolloBeamGoal extends Goal {
         // 常にターゲットの方向を向く
         if(this.target!=null)
         {
-            this.apolloBoss.lookAt(this.target, 30.0F, 30.0F);
+            this.apolloBoss.getLookControl().setLookAt(this.target, 30.0F, 30.0F);
+            // 体の向きもターゲットの方向に向ける
+            double dx=this.target.getX()-this.apolloBoss.getX();
+            double dz=this.target.getZ()-this.apolloBoss.getZ();
+            float targetYRot=(float)(Math.atan2(dz, dx)*(180.0D/Math.PI))-90.0F;
+            // 現在の向きからターゲットの向きへ、滑らかに回転させる
+            float newRot= Mth.rotLerp(this.apolloBoss.yBodyRot, targetYRot, 5.0F);
+            // 体と全体の向きを更新
+            this.apolloBoss.yBodyRot=newRot;
+            this.apolloBoss.setYRot(newRot);
         }
         // 設定した予備動作時間が来たらビーム発射
         if(this.attackTime==this.warmUpTime)

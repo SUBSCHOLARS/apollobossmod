@@ -1,13 +1,7 @@
 {
-  "minecraft:adventure/root": {
-    "criteria": {
-      "killed_by_something": "2025-11-22 22:26:58 +0900"
-    },
-    "done": true
-  },
   "minecraft:adventure/adventuring_time": {
     "criteria": {
-      "minecraft:desert": "2025-11-21 23:02:28 +0900"
+      "minecraft:savanna": "2025-11-24 22:01:33 +0900"
     },
     "done": false
   },

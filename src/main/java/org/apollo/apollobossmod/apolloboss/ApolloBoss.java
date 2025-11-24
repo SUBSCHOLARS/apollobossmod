@@ -125,12 +125,32 @@ public class ApolloBoss extends Monster implements IAnimatable {
         }
         return super.hurt(source,amount);
     }
+
+    @Override
+    public boolean doHurtTarget(@NotNull Entity target) {
+        // まず通常のダメージ処理を行う
+        boolean success=super.doHurtTarget(target);
+        // 攻撃が成功し、かつ対象が生き物ならば、上方向に吹き飛ばすような処理を行う
+        if(success && target instanceof LivingEntity)
+        {
+            // 1. 現在の速度ベクトルを取得
+            Vec3 currentVelocity=target.getDeltaMovement();
+            // 2. 上方向に強い力を加える
+            double blastStrength=1.0D;
+            // 水平方向は今の速度を維持しつつ、上方向だけ加算する
+            target.setDeltaMovement(currentVelocity.x, blastStrength, currentVelocity.z);
+            // 3. 外部から衝撃が加わったというフラグを立てる
+            target.hasImpulse=true;
+        }
+        return success;
+    }
+
     private void startHealing()
     {
         this.setHealing(true);
         this.healTimer=40; // 40tick（2秒間）のモーション
         // 手にアイテム（例: 金リンゴ）を持たせる
-        this.setItemInHand(InteractionHand.MAIN_HAND,new ItemStack(Items.GOLDEN_APPLE));
+        this.setItemInHand(InteractionHand.MAIN_HAND,new ItemStack(new ApolloChocolate()));
     }
     public void startAttacking()
     {
@@ -187,7 +207,7 @@ public class ApolloBoss extends Monster implements IAnimatable {
         // ビーム攻撃
         if(this.isBeaming())
         {
-            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.apollo_boss.beam",true));
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.apollo_boss.beam",false));
             return PlayState.CONTINUE;
         }
         // 回復中ならアニメーション

@@ -1,6 +1,14 @@
 {
+  "minecraft:adventure/root": {
+    "criteria": {
+      "killed_by_something": "2025-11-24 22:14:09 +0900"
+    },
+    "done": true
+  },
   "minecraft:adventure/adventuring_time": {
     "criteria": {
+      "minecraft:lukewarm_ocean": "2025-11-24 22:40:55 +0900",
+      "minecraft:stony_shore": "2025-11-24 22:26:20 +0900",
       "minecraft:savanna": "2025-11-24 22:01:33 +0900"
     },
     "done": false

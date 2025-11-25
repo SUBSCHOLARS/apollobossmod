@@ -27,6 +27,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
+import org.apollo.apollobossmod.Apollobossmod;
 import org.jetbrains.annotations.NotNull;
 import software.bernie.geckolib3.core.IAnimatable;
 import software.bernie.geckolib3.core.PlayState;
@@ -119,9 +120,10 @@ public class ApolloBoss extends Monster implements IAnimatable {
     @Override
     public boolean hurt(@NotNull DamageSource source, float amount) {
         // すでに回復中や攻撃中でなければ、30%の確率で回復行動をとる
-        if(!this.level.isClientSide&&!isHealing()&&!isAttacking()&&this.random.nextFloat()<0.3F)
+        if(!this.level.isClientSide&&!isHealing()&&!isAttacking())
         {
             startHealing();
+            System.out.println("アポロがアポロを食べる");
         }
         return super.hurt(source,amount);
     }
@@ -149,8 +151,8 @@ public class ApolloBoss extends Monster implements IAnimatable {
     {
         this.setHealing(true);
         this.healTimer=40; // 40tick（2秒間）のモーション
-        // 手にアイテム（例: 金リンゴ）を持たせる
-        this.setItemInHand(InteractionHand.MAIN_HAND,new ItemStack(new ApolloChocolate()));
+        this.setItemInHand(InteractionHand.MAIN_HAND,new ItemStack(Apollobossmod.APOLLO_CHOCOLATE));
+        System.out.println("Main hand: " + this.getMainHandItem());
     }
     public void startAttacking()
     {

@@ -38,7 +38,7 @@ public class Apollobossmod {
     public static final String MODID="apollobossmod";
 
     public static final EntityType<ApolloBoss> APOLLO_BOSS=EntityType.Builder.of(ApolloBoss::new, MobCategory.CREATURE)
-            .sized(5F,2.5F)
+            .sized(3F,4F)
             .setTrackingRange(32)
             .setShouldReceiveVelocityUpdates(true)
             .build("apollo_boss");

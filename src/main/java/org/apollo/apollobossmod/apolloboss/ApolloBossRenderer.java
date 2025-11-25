@@ -48,6 +48,7 @@ public class ApolloBossRenderer extends GeoEntityRenderer<ApolloBoss> {
                 RenderUtils.scale(geoBone,poseStack);
 
                 poseStack.mulPose(Vector3f.XP.rotationDegrees(-90.0F));
+                poseStack.translate(1D,0D,0.8D);
 
                 Minecraft.getInstance().getItemRenderer().renderStatic(
                         itemStack,
